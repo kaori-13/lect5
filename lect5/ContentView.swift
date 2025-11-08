@@ -1,23 +1,23 @@
-//
-//  ContentView.swift
-//  lect5
-//
-//  Created by Fanny on 2025/10/17.
-//
+
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+                TabView {
+                    Tab("Homepage", systemImage: "house.circle.fill") {
+                        HomepageView()
+                    }
+                    Tab("Intro", systemImage: "person.circle.fill") {
+                        IntroView()
+                    }
+                    Tab("Gallery", systemImage: "books.vertical") {
+                        GalleryView()
+                    }
+                }
+            }
         }
-        .padding()
-    }
-}
+
 
 #Preview {
     ContentView()
